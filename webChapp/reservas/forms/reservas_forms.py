@@ -20,10 +20,7 @@ class FormInicio(forms.Form):
         if finicio < datetime.date.today():
             raise ValidationError("La fecha de entrada no puede ser menor a la de hoy")
             
-        if finicio < datetime.date.today():
-            raise ValidationError("La fecha de entrada no puede ser menor a la de hoy")
-            
-        if finicio > datetime.date(2020, 12 , 31):
+        if ffin > datetime.date(2020, 12 , 31):
             raise ValidationError("Solo se permiten reservas hasta el día 31-12-2020")
         
 
