@@ -1,0 +1,46 @@
+{% extends "./base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div id="image_container">
+<div id = "text_container">
+    
+
+    <h1><i class="fas fa-bed"></i>&nbsp&nbsp¡Haga una reserva ahora!</h1>
+</div>
+
+
+
+<div class = "form_container" id = "main">
+    
+    
+    <div id="form_bl">
+        <form method = "POST" action="{% url 'inicio' %}">
+            {{ form.personas.label_tag }}
+            {{ form.personas }}
+            {{ form.fechainicio.label_tag }}
+            {{ form.fechainicio }}
+            {{ form.fechafin.label_tag }}
+            {{ form.fechafin }}
+            {% csrf_token %}
+            <input type="submit" value="reservar">
+
+
+        </form>
+    </div>
+</div>
+{% if form.errors %}
+<div class="error_container">
+    
+        <p>{{ form.non_field_errors  }}</p>
+
+    
+</div>
+{% endif %}
+</div>
+
+{% endblock %}
+

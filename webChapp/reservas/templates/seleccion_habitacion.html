@@ -1,0 +1,33 @@
+{% extends "./base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="habitaciones_container">
+    <h2>Habitaciones disponibles para la fecha seleccionada <i class="fas fa-calendar-alt"></i> {{ fechainicio }} - {{ fechafin }}</h2>
+{% if habitaciones %}
+
+{% for habitacion in habitaciones %}
+    
+<div class="habitacion">
+    <div class="hab_inn">
+        
+        <p class="hab_persona">{{ habitacion.tipo }} persona</p>
+        <p class="hab_precio">{{ habitacion.precio }} <span>€/noche</span></p>
+        <form action="{% url 'seleccionhab' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" value="{{ habitacion.id }}" name="id" id="id">
+            <input type="submit" value="seleccionar">
+
+        </form>
+    </div>
+</div>
+{% endfor %}
+
+{% endif %}
+
+</div>
+
+{% endblock %}
+

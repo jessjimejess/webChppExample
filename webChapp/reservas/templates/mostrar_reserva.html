@@ -1,0 +1,64 @@
+{% extends "./base.html" %}
+
+
+
+{% block content %}
+
+{% if form %}
+<div class = form_container id="show">
+
+    <div id="form_txt" class = "form_cont_inn">
+        <h1>Consultar reserva</h1>
+    </div>
+
+    {% if form.errors %}
+    <div id="form_error" class = "form_cont_inn">
+        <p>Corrija los siguientes errores</p>
+        {{ form.errors }}
+    </div>
+    {% endif %}
+
+    <div id="form_bs">
+    <form method = "POST" action="{% url 'mostrareserva' %}" novalidate>
+        <div class="labelform_ms">
+        {{ form.localizador.label_tag  }}
+        {{ form.localizador }}
+        </div>
+        <div class = "labelform_ms">{{ form.email.label_tag  }}
+        {{ form.email }}</div>
+    {% csrf_token %}
+    <input type="submit" value="Buscar">
+
+
+</form>
+</div>
+</div>
+
+{% elif reserva %}
+
+{% for reserva in reserva %}
+
+<div class = "reserva_container">
+    <div class = "data_container">
+        <h4>Reserva con localizador: {{ reserva.localizador }}</h4>
+
+    <div class = "data_container">
+        <p>Nombre - {{ reserva.nombre }}</p>
+        <p>Email - {{ reserva.email }}</p>
+        <p>Fecha - Desde {{ reserva.fsalida }} hasta {{ reserva.fentrada }}</p>
+    </div>
+
+    <div class = "data_container">
+        <p>Habitacion - {{ reserva.habitacion.tipo }} personas</p>
+        <p>Huespedes - {{ reserva.huespedes }}</p>
+        <p>Precio - {{ reserva.precio }} euros</p>
+    </div>
+    </div>
+
+{% endfor %}
+
+{% endif %}
+
+
+{% endblock %}
+

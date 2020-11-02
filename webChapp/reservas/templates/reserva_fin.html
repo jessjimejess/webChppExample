@@ -1,0 +1,27 @@
+{% extends "./base.html" %}
+
+
+
+{% block content %}
+
+{% if reserva %}
+<div class = "reserva_container">
+    <div class = "info_msg_container">
+        <p>Se ha creado una reserva a nombre de {{ reserva.nombre }}</p>
+        <p><b>Localizador de la reserva (guarde el localizador para futuras gestiones)</b></p>
+        <p id="loc">{{ reserva.localizador }}</p>
+        <p>Se ha enviado un correo con la confirmación de la reserva a <b>{{ reserva.email }}</b></p>
+
+    </div>
+    <div class = "data_container">
+        <p>Detalles de la reserva</p>
+        <p><b>Precio:</b> {{ reserva.precio }}</p>
+        <p><b>Huespedes:</b> {{ reserva.habitacion.tipo }}</p>
+        <p><b>Periodo:</b> {{ reserva.fentrada }} a {{ reserva.fsalida }}</p>
+
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}
+

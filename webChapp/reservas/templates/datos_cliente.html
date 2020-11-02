@@ -1,0 +1,47 @@
+{% extends "./base.html" %}
+
+
+
+{% block content %}
+
+
+<div class = form_container id="show">
+
+    <div id="form_txt" class = "form_cont_inn">
+        <h2><i class="fas fa-euro-sign"></i>&nbsp{{ precio }}&nbsp&nbsp&nbsp<i class="fas fa-user-friends"></i>
+            &nbsp{{ huespedes }}&nbsp&nbsp&nbsp <i class="fas fa-bed"></i>&nbsp {{ tipo }}&nbsp&nbsp&nbsp<i class="fas fa-calendar-alt">
+            </i>&nbsp{{ fsalida }} - {{ fentrada }}</h2>
+    </div>
+
+    {% if form.errors %}
+    <div id="form_error" class = "form_cont_inn">
+        <p>Corrija los siguientes errores</p>
+        {{ form.errors }}
+    </div>
+    {% endif %}
+
+    <div id="form_bs">
+    <form method = "POST" action="{% url 'realizarReserva' %}" novalidate>
+        <div class="labelform_ms">
+        {{ form.nombre.label_tag  }}
+        {{ form.nombre }}
+        </div>
+        <div class = "labelform_ms">
+            {{ form.email.label_tag  }}
+             {{ form.email }}
+        </div>
+        <div class = "labelform_ms">
+            {{ form.telefono.label_tag  }}
+            {{ form.telefono }}
+        </div>
+        {% csrf_token %}
+    <input type="submit" value="Confirmar">
+
+
+</form>
+</div>
+</div>
+
+
+{% endblock %}
+

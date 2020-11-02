@@ -1,0 +1,256 @@
+
+
+
+body {
+    font-family: "Grand Hotel";
+    font-family: "Poppins",Helvetica,Arial,sans-serif; 
+    margin: 0;
+    -webkit-font-smoothing: auto;
+  }
+
+.reserva_container{
+    text-align: center;
+    width: 1000px;
+    color:  #02122c;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.form_error{
+    background-color: #fafbfe;
+    color: #02122c;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    font-weight: bolder;
+
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
+   }
+
+
+
+.form_container{
+
+    background-color: #02122c;
+    color: white;
+    margin-left:auto;
+    margin-right:auto;
+    
+    
+    
+}
+
+#main{
+    height: 68px;
+    margin-top: 200px;
+    width: 950px;
+   
+}
+
+#main label{
+    margin-left: 30px;
+    margin-right: 5px;
+    font-weight: bold;
+   
+}
+#image_container{
+    overflow: hidden;
+    background: url('ronda.jpg') 50% 0 no-repeat fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+
+
+
+}
+#show{
+    overflow: auto;
+    height: auto;
+    margin-top: 100px;
+    width: 700px;
+    
+}
+
+
+
+#form_bs{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 250px;
+    margin-right: auto;
+    
+    
+}
+
+#form_txt{
+    text-align: center;
+
+}
+
+#form_bl{
+    margin: auto;
+    text-align: center;
+    width: 90%;
+    padding-top: 20px;
+
+    
+}
+
+#text_container{
+    font-weight: bold;
+    width: auto;
+    color: white;
+    margin-top: 200px;
+    text-align: center;
+    font-size: 25px;
+}
+.menu{
+    overflow:auto;
+    background-color:  #fafbfe;
+    color: #0770e3;
+    border-bottom: 1px solid #f0f0f0;
+    
+   
+}
+.menu_link li{
+    margin-right: 20px;
+}
+
+
+
+.menu h1{
+    margin-left: 20px;
+    width: 70%;
+    float: left;
+    font-family: "Grand Hotel";
+    font-weight: normal;
+
+}
+
+.menu_link{
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.menu_link li{
+    display: inline;
+    
+
+}
+
+.habitacion{
+    overflow:auto;
+
+    background-color: gray;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    
+}
+
+.habitaciones_container{
+    
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    color: white;
+}
+
+.hab_persona{
+    font-size: 30px;
+}
+
+.hab_precio{
+    font-size: 40px
+
+}
+
+.hab_precio span{
+    font-size: 20px;
+}
+
+.hab_inn{
+    margin-left: 20px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form_cont_inn{
+    border-bottom: 10px solid white;
+}
+
+input{
+    border-radius: 4px;
+    height: 30px;
+    border: 2px solid #dee2e6;
+    box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.05)
+    
+}
+#form_error{
+    padding-left: 150px;
+}
+
+select{
+        border-radius: 4px;
+        height: 30px;
+        border: 2px solid #dee2e6;
+        box-shadow:  0 0.25rem 0.125rem 0 rgba(0,0,0,0.05)
+        
+    
+}
+
+.labelform_ms{
+    
+    margin-bottom: 10px;
+
+}
+
+
+.labelform_ms label{
+    display: block;
+}
+
+#loc{
+    color:  #02122c;
+    font-size: 30px;
+}
+
+.info_msg_container{
+    background-color: #fafbfe;
+    border: 1px solid #f0f0f0;
+
+}
+
+.data_container{
+    background-color: #fafbfe;
+    margin-top: 20px;
+    border: 1px solid #f0f0f0;
+}
+
+
+.error_container{
+    background-color:  #02122c;
+    color: white;
+    text-align: center;
+    width: 950px;
+    margin: auto;
+    overflow: auto;
+}
+
+
+.habitaciones_container h2{
+
+    text-align: center;
+    color: #02122c;
+}
